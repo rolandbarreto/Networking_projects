@@ -28,16 +28,8 @@ def address_mask(address_class):
 def get_ip_type(ip):
     if ip.is_private:
         return 'Privada'
-    elif ip.is_loopback:
-        return 'Loopback'
-    elif ip.is_multicast:
-        return 'Multicast'
-    elif ip.is_reserved:
-        return 'Reservada'
-    elif not ip.is_private:
-        return 'Publica'
     else:
-        return 'Unknown'
+        return 'Publica'
     
 
 def run():
@@ -46,7 +38,7 @@ def run():
     mask = address_mask(address_class)
     print('Esta dirección es de tipo: ' + address_class)
     print('Esta es su mascara correspondiente: ' + mask)
-    
+
 
     ip = ipaddress.IPv4Address(address)
     print('Esta es el tipo: ' + get_ip_type(ip))
