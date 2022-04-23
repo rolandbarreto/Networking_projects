@@ -36,12 +36,12 @@ def run():
     address = input('Ingrese su dirección IP: ')
     address_class = address_type(address)
     mask = address_mask(address_class)
-    print('Esta dirección es de tipo: ' + address_class)
-    print('Esta es su mascara correspondiente: ' + mask)
+    print('Clase: ' + address_class)
+    print('Máscara: ' + mask)
 
 
     ip = ipaddress.IPv4Address(address)
-    print('Esta es el tipo: ' + get_ip_type(ip))
+    print('Tipo: ' + get_ip_type(ip))
 
 
 
